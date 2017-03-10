@@ -18,9 +18,4 @@
   ([block element modifiers] (bem block element modifiers)))
 
 (defn -main
-  [& args]
-  (let [b (block "goofy")
-        be (block "goofy" "bob")]
-   (pr (be {:a true
-            :b (> 5 0)
-            :c false}))))
+  [& args])
