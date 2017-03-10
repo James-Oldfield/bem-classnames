@@ -1,32 +1,19 @@
 # bem-classnames
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+A small clojure library to generate [BEM](http://getbem.com/) classnames à la some [react libraries](https://github.com/pocotan001/bem-classnames)
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar bem-classnames-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```clojure
+(def b (block "block")) ;; "block"
+(def be (block "block" "element")) ;; "block__element"
+(def bem (block "block" "element" {:modifier true
+                                   :not-me false})) ;; "block__element--modifier"
+                                
+;; via partial application
+(def b (block "block")) ;; Function
+(def be (b "element" {})) ;; "block__element"
+```
 
 ## License
 
